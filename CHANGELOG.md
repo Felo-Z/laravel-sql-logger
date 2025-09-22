@@ -1,6 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [2.2.11] - 2025-09-09
+### Changed
+- Add support for Laravel 12
 
 ## [2.2.10] - 2023-02-25
 ### Changed

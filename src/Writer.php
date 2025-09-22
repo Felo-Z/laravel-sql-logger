@@ -43,7 +43,6 @@ class Writer
     public function save(SqlQuery $query)
     {
         $this->createDirectoryIfNotExists($query->number());
-
         $line = $this->formatter->getLine($query);
 
         if ($this->shouldLogQuery($query)) {

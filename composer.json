@@ -1,5 +1,5 @@
 {
-    "name": "mnabialek/laravel-sql-logger",
+    "name": "felo-z/laravel-sql-logger",
     "description": "Log SQL queries in Laravel/Lumen framework",
     "keywords": ["laravel", "sql", "log", "logger", "lumen", "sql logger", "log sql queries", "log sql", "sql log"],
     "license": "MIT",
@@ -7,22 +7,24 @@
         {
             "name": "Marcin Nabiałek",
             "email": "dev@nabialek.org"
-        }
+        }, {
+        "name": "felo z",
+        "email": "1538193053@qq.com"
+      }
     ],
-    "require": {
-        "illuminate/support": "5.*|6.*|7.*|8.*|9.*|10.*|11.*",
-        "mnabialek/laravel-version": "^1.0.6",
-        "nesbot/carbon": "~1.0 || ^2.0 || ^3.0",
-        "illuminate/filesystem": "5.*|6.*|7.*|8.*|9.*|10.*|11.*",
-        "illuminate/container": "5.*|6.*|7.*|8.*|9.*|10.*|11.*"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "phpunit/phpunit": "^11.0",
-        "mockery/mockery": "^1.0",
-        "php-coveralls/php-coveralls": "^2.0",
-        "laravel/framework": "11.*"
-    },
+  "require": {
+    "illuminate/support": "12.*",
+    "nesbot/carbon": "~1.0 || ^2.0 || ^3.0",
+    "illuminate/filesystem": "6.*|7.*|8.*|9.*|10.*|11.*|12.*",
+    "illuminate/container": "6.*|7.*|8.*|9.*|10.*|11.*|12.*"
+  },
+  "require-dev": {
+    "laravel/framework": "12.*",
+    "friendsofphp/php-cs-fixer": "^3.87",
+    "php-coveralls/php-coveralls": "^0.1.0",
+    "phpunit/phpunit": "^11.5",
+    "mockery/mockery": "^1.6"
+  },
     "autoload": {
         "psr-4": {
             "Mnabialek\\LaravelSqlLogger\\": "src/"
@@ -38,10 +40,6 @@
             "providers": [
                 "Mnabialek\\LaravelSqlLogger\\Providers\\ServiceProvider"
             ]
-        },
-        "thanks": {
-            "name": "mnabialek/laravel-version",
-            "url": "https://github.com/mnabialek/laravel-version"
         },
         "suggest": {
             "symfony/thanks": "Star packages you use running 'composer thanks' command"

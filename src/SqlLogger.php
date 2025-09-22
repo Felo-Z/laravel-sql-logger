@@ -10,24 +10,24 @@ class SqlLogger
     /**
      * @var Container
      */
-    private $app;
+    public $app;
 
     /**
      * @var Query
      */
-    private $query;
+    public $query;
 
     /**
      * @var Writer
      */
-    private $writer;
+    public $writer;
 
     /**
      * Number of executed queries.
      *
      * @var int
      */
-    private $queryNumber = 0;
+    public $queryNumber = 0;
 
     /**
      * SqlLogger constructor.

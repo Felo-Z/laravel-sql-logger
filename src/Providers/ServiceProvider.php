@@ -90,8 +90,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected function getListenClosure(SqlLogger $logger)
     {
-        return function ($query, $bindings = null, $time = null) use ($logger) {
-            $logger->log($query, $bindings, $time);
+        return function ($rawQuery) use ($logger) {
+            $logger->log($rawQuery->sql, $rawQuery->bindings, $rawQuery->time);
         };
     }
 }

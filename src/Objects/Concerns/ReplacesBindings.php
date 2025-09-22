@@ -17,7 +17,6 @@ trait ReplacesBindings
     protected function replaceBindings($sql, array $bindings)
     {
         $generalRegex = $this->getRegex();
-
         foreach ($this->formatBindings($bindings) as $key => $binding) {
             $regex = is_numeric($key) ? $generalRegex : $this->getNamedParameterRegex($key);
             $sql = preg_replace($regex, $this->value($binding), $sql, 1);
