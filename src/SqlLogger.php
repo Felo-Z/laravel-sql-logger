@@ -50,7 +50,7 @@ class SqlLogger
      * @param array|null $bindings
      * @param float|null $time
      */
-    public function log($query, array $bindings = null, $time = null)
+    public function log($query, ?array $bindings = null, ?float $time = null)
     {
         ++$this->queryNumber;
 

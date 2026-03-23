@@ -21,8 +21,14 @@ class Query
      *
      * @return SqlQuery
      */
-    public function get($number, $query, array $bindings = null, $time = null)
+    public function get($number, $query, ?array $bindings = null, ?float $time = null)
     {
-        return new SqlQuery($number, $query, $bindings, $time);
+        if (is_object($query) && property_exists($query, 'sql')) {
+            $bindings = $query->bindings ?? [];
+            $time = $query->time ?? null;
+            $query = $query->sql;
+        }
+
+        return new SqlQuery($number, $query, $bindings ?? [], $time);
     }
 }
